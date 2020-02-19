@@ -16,7 +16,7 @@ HTTPManager::~HTTPManager()
 void HTTPManager::sendImageRequest()
 {
     QNetworkRequest request;
-    request.setUrl(QUrl("https://www.gstatic.com/webp/gallery/1.jpg"));
+    request.setUrl(QUrl("https://i.pinimg.com/736x/68/94/93/6894931eb3e93f6d6ef2dd000d8acdc6.jpg"));
     imageDownloadManager->get(request);
     qDebug() << "Image request sent to address" << request.url();
 }
