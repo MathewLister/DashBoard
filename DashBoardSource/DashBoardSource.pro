@@ -1,4 +1,5 @@
-QT       += core gui
+QT       += core gui network
+INCLUDEPATH += C:/OpenSSL-Win64/include
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
