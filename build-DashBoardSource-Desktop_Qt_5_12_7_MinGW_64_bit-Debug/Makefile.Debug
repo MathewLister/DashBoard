@@ -813,30 +813,7 @@ debug/mainwindow.o: ../DashBoardSource/mainwindow.cpp ../DashBoardSource/mainwin
 		C:/Qt/5.12.7/mingw73_64/include/QtCore/QIODevice \
 		C:/Qt/5.12.7/mingw73_64/include/QtNetwork/QNetworkRequest \
 		C:/Qt/5.12.7/mingw73_64/include/QtGui/QPixmap \
-		ui_mainwindow.h \
-		C:/Qt/5.12.7/mingw73_64/include/QtWidgets/QApplication \
-		C:/Qt/5.12.7/mingw73_64/include/QtWidgets/qapplication.h \
-		C:/Qt/5.12.7/mingw73_64/include/QtCore/qcoreapplication.h \
-		C:/Qt/5.12.7/mingw73_64/include/QtCore/qeventloop.h \
-		C:/Qt/5.12.7/mingw73_64/include/QtWidgets/qdesktopwidget.h \
-		C:/Qt/5.12.7/mingw73_64/include/QtGui/qguiapplication.h \
-		C:/Qt/5.12.7/mingw73_64/include/QtGui/qinputmethod.h \
-		C:/Qt/5.12.7/mingw73_64/include/QtWidgets/QLCDNumber \
-		C:/Qt/5.12.7/mingw73_64/include/QtWidgets/qlcdnumber.h \
-		C:/Qt/5.12.7/mingw73_64/include/QtWidgets/qframe.h \
-		C:/Qt/5.12.7/mingw73_64/include/QtWidgets/QLabel \
-		C:/Qt/5.12.7/mingw73_64/include/QtWidgets/qlabel.h \
-		C:/Qt/5.12.7/mingw73_64/include/QtWidgets/QMenuBar \
-		C:/Qt/5.12.7/mingw73_64/include/QtWidgets/qmenubar.h \
-		C:/Qt/5.12.7/mingw73_64/include/QtWidgets/qmenu.h \
-		C:/Qt/5.12.7/mingw73_64/include/QtWidgets/qaction.h \
-		C:/Qt/5.12.7/mingw73_64/include/QtWidgets/qactiongroup.h \
-		C:/Qt/5.12.7/mingw73_64/include/QtWidgets/QPushButton \
-		C:/Qt/5.12.7/mingw73_64/include/QtWidgets/qpushbutton.h \
-		C:/Qt/5.12.7/mingw73_64/include/QtWidgets/qabstractbutton.h \
-		C:/Qt/5.12.7/mingw73_64/include/QtWidgets/QStatusBar \
-		C:/Qt/5.12.7/mingw73_64/include/QtWidgets/qstatusbar.h \
-		C:/Qt/5.12.7/mingw73_64/include/QtWidgets/QWidget
+		ui_mainwindow.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o debug\mainwindow.o ..\DashBoardSource\mainwindow.cpp
 
 debug/moc_httpmanager.o: debug/moc_httpmanager.cpp 

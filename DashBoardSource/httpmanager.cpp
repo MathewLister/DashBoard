@@ -5,7 +5,7 @@ HTTPManager::HTTPManager(QObject *parent) :
     imageDownloadManager(new QNetworkAccessManager)
 {
     connect(imageDownloadManager, SIGNAL(finished(QNetworkReply*)),
-            this, SLOT(ImageDownloadHandler(QNetworkReply*)));
+            this, SLOT(ImageDownloadedHandler(QNetworkReply*)));
 }
 
 HTTPManager::~HTTPManager()
