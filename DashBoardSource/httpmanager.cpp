@@ -8,8 +8,8 @@ HTTPManager::HTTPManager(QObject *parent) :
     connect(imageDownloadManager, SIGNAL(finished(QNetworkReply*)),
             this, SLOT(ImageDownloadedHandler(QNetworkReply*)));
 
-    connect(weatherAPIManager, SIGNAL(finished(QNetowrkReply*)),
-            this, SLOT(WeatherDownloadedHandler(QNetowrkReply*)));
+    connect(weatherAPIManager, SIGNAL(finished(QNetworkReply*)),
+                this, SLOT(WeatherDownloadedHandler(QNetworkReply*)));
 }
 
 HTTPManager::~HTTPManager()

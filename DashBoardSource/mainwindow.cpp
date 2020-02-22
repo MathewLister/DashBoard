@@ -16,7 +16,7 @@ MainWindow::MainWindow(QWidget *parent)
             this, SLOT(processImage(QPixmap *)));
 
     connect(httpManager, SIGNAL(WeatherJsonReady(QJsonObject *)),
-            this, SLOT(processWeatherJson(QObject *)));
+            this, SLOT(processWeatherJson(QJsonObject *)));
 }
 
 MainWindow::~MainWindow()
@@ -63,13 +63,40 @@ void MainWindow::setCurrentTime()
 
 void MainWindow::processImage(QPixmap *image)
 {
-    qDebug() << "json ready";
     ui->ImageLabel->setPixmap(*image);
 }
 
 void MainWindow::processWeatherJson(QJsonObject *json)
 {
-    qDebug() << json->value("weather");
+        qDebug() << "Json ready";
+        QString weather = json->value("weather").toArray()[0].toObject()["main"].toString();
+        QString weatherDesc = json->value("weather").toArray()[0].toObject()["description"].toString();
+        double temp = json->value("main").toObject()["temp"].toDouble();
+        double temp_min = json->value("main").toObject()["temp_min"].toDouble();
+        double temp_max = json->value("main").toObject()["temp_max"].toDouble();
+
+        qDebug() << weather;
+        qDebug() << weatherDesc;
+        qDebug() << temp;
+        qDebug() << temp_min;
+        qDebug() << temp_max;
+
+        ui->WeatherLabel->setText("Current Weather: " + weather + ", temp: " + QString::number(temp));
+
+        /*
+         * {
+         *    "coord": {"lon":-122.38,"lat":47.64},
+         *    "weather":[{"id":803,"main":"Clouds","description":"broken clouds","icon":"04d"}],
+         *    "base":"stations",
+         *    "main":{"temp":288.38,"pressure":1015,"humidity":72,"temp_min":287.04,"temp_max":289.82},
+         *    "visibility":16093,
+         *    "wind":{"speed":2.22,"deg":329.191},
+         *    "clouds":{"all":75},
+         *    "dt":1558543054,
+         *    "sys":{"type":1,"id":3417,"message":0.0113,"country":"US","sunrise":1558527857,"sunset":1558583303},
+         *    "timezone":-25200,"id":420040214,"name":"Seattle","cod":200
+         * }
+         * */
 }
 
 

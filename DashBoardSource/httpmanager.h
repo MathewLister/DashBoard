@@ -7,6 +7,7 @@
 #include <QPixmap>
 #include <QJsonDocument>
 #include <QJsonObject>
+#include <QJsonArray>
 
 class HTTPManager : public QObject
 {
