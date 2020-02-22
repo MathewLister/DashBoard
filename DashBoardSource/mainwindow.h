@@ -4,6 +4,7 @@
 #include <QMainWindow>
 #include <QTimer>
 #include <QTime>
+#include <QJsonObject>
 
 #include "httpmanager.h"
 
@@ -22,8 +23,11 @@ public:
 private slots:
     void setCurrentTime();
     void processImage(QPixmap *);
+    void processWeatherJson(QJsonObject *json);
 
     void on_ImageDownloadButton_clicked();
+
+    void on_WeatherDownloadButton_clicked();
 
 private:
     Ui::MainWindow *ui;
