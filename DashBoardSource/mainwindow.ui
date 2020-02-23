@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>1304</width>
-    <height>763</height>
+    <height>1178</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -97,7 +97,7 @@
      </rect>
     </property>
     <property name="text">
-     <string>Image Downlad </string>
+     <string>Download Map </string>
     </property>
    </widget>
    <widget class="QLabel" name="ImageLabel">
@@ -136,7 +136,7 @@
      </rect>
     </property>
     <property name="text">
-     <string>Weather Download</string>
+     <string>Download Weather</string>
     </property>
    </widget>
    <widget class="QLabel" name="WeatherLabel">
@@ -163,6 +163,19 @@
     </property>
     <property name="text">
      <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="PhotoAlbum">
+    <property name="geometry">
+     <rect>
+      <x>40</x>
+      <y>550</y>
+      <width>591</width>
+      <height>391</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>PhotoAlbum</string>
     </property>
    </widget>
   </widget>

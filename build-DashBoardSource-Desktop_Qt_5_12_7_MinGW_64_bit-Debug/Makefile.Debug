@@ -117,7 +117,13 @@ compiler_rcc_make_all: debug/qrc_Resources.cpp
 compiler_rcc_clean:
 	-$(DEL_FILE) debug\qrc_Resources.cpp
 debug/qrc_Resources.cpp: ../DashBoardSource/Resources.qrc \
-		C:/Qt/5.12.7/mingw73_64/bin/rcc.exe
+		C:/Qt/5.12.7/mingw73_64/bin/rcc.exe \
+		../DashBoardSource/Images/Cloudy.png \
+		../DashBoardSource/Images/Rain.png \
+		../DashBoardSource/Images/Drizzle.png \
+		../DashBoardSource/Images/sun.png \
+		../DashBoardSource/Images/Thunder.png \
+		../DashBoardSource/Images/Snow.png
 	C:\Qt\5.12.7\mingw73_64\bin\rcc.exe -name Resources ..\DashBoardSource\Resources.qrc -o debug\qrc_Resources.cpp
 
 compiler_moc_predefs_make_all: debug/moc_predefs.h
@@ -866,7 +872,36 @@ debug/mainwindow.o: ../DashBoardSource/mainwindow.cpp ../DashBoardSource/mainwin
 		C:/Qt/5.12.7/mingw73_64/include/QtCore/qjsondocument.h \
 		C:/Qt/5.12.7/mingw73_64/include/QtCore/QJsonArray \
 		C:/Qt/5.12.7/mingw73_64/include/QtCore/qjsonarray.h \
-		ui_mainwindow.h
+		ui_mainwindow.h \
+		C:/Qt/5.12.7/mingw73_64/include/QtWidgets/QApplication \
+		C:/Qt/5.12.7/mingw73_64/include/QtWidgets/qapplication.h \
+		C:/Qt/5.12.7/mingw73_64/include/QtCore/qcoreapplication.h \
+		C:/Qt/5.12.7/mingw73_64/include/QtCore/qeventloop.h \
+		C:/Qt/5.12.7/mingw73_64/include/QtWidgets/qdesktopwidget.h \
+		C:/Qt/5.12.7/mingw73_64/include/QtGui/qguiapplication.h \
+		C:/Qt/5.12.7/mingw73_64/include/QtGui/qinputmethod.h \
+		C:/Qt/5.12.7/mingw73_64/include/QtWidgets/QLCDNumber \
+		C:/Qt/5.12.7/mingw73_64/include/QtWidgets/qlcdnumber.h \
+		C:/Qt/5.12.7/mingw73_64/include/QtWidgets/qframe.h \
+		C:/Qt/5.12.7/mingw73_64/include/QtWidgets/QLabel \
+		C:/Qt/5.12.7/mingw73_64/include/QtWidgets/qlabel.h \
+		C:/Qt/5.12.7/mingw73_64/include/QtWidgets/QLineEdit \
+		C:/Qt/5.12.7/mingw73_64/include/QtWidgets/qlineedit.h \
+		C:/Qt/5.12.7/mingw73_64/include/QtGui/qtextcursor.h \
+		C:/Qt/5.12.7/mingw73_64/include/QtGui/qtextformat.h \
+		C:/Qt/5.12.7/mingw73_64/include/QtGui/qpen.h \
+		C:/Qt/5.12.7/mingw73_64/include/QtGui/qtextoption.h \
+		C:/Qt/5.12.7/mingw73_64/include/QtWidgets/QMenuBar \
+		C:/Qt/5.12.7/mingw73_64/include/QtWidgets/qmenubar.h \
+		C:/Qt/5.12.7/mingw73_64/include/QtWidgets/qmenu.h \
+		C:/Qt/5.12.7/mingw73_64/include/QtWidgets/qaction.h \
+		C:/Qt/5.12.7/mingw73_64/include/QtWidgets/qactiongroup.h \
+		C:/Qt/5.12.7/mingw73_64/include/QtWidgets/QPushButton \
+		C:/Qt/5.12.7/mingw73_64/include/QtWidgets/qpushbutton.h \
+		C:/Qt/5.12.7/mingw73_64/include/QtWidgets/qabstractbutton.h \
+		C:/Qt/5.12.7/mingw73_64/include/QtWidgets/QStatusBar \
+		C:/Qt/5.12.7/mingw73_64/include/QtWidgets/qstatusbar.h \
+		C:/Qt/5.12.7/mingw73_64/include/QtWidgets/QWidget
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o debug\mainwindow.o ..\DashBoardSource\mainwindow.cpp
 
 debug/qrc_Resources.o: debug/qrc_Resources.cpp 

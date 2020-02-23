@@ -24,6 +24,7 @@ private slots:
     void setCurrentTime();
     void processImage(QPixmap *);
     void processWeatherJson(QJsonObject *json);
+    void processAlbum(QPixmap *);
 
     void loadWeatherImages(QString current);
 

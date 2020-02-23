@@ -12,11 +12,16 @@ MainWindow::MainWindow(QWidget *parent)
     setCurrentTime();
     timer->start(1000);
 
-    connect(httpManager, SIGNAL(ImageReady(QPixmap *)),
+    connect(httpManager, SIGNAL(MapReady(QPixmap *)),
             this, SLOT(processImage(QPixmap *)));
 
     connect(httpManager, SIGNAL(WeatherJsonReady(QJsonObject *)),
             this, SLOT(processWeatherJson(QJsonObject *)));
+
+    connect(httpManager, SIGNAL(AlbumReady(QPixmap *)),
+            this, SLOT(processAlbum(QPixmap *)));
+
+    httpManager->sendAlbumRequest();
 }
 
 MainWindow::~MainWindow()
@@ -101,6 +106,12 @@ void MainWindow::processWeatherJson(QJsonObject *json)
          * */
 }
 
+void MainWindow::processAlbum(QPixmap *image)
+{
+    *image = image->scaled(ui->PhotoAlbum->size(), Qt::KeepAspectRatio);
+    ui->PhotoAlbum->setPixmap(*image);
+}
+
 void MainWindow::loadWeatherImages(QString current)
 {
         QString clearFileName(":/Images/sun.png");
@@ -166,7 +177,7 @@ void MainWindow::on_ImageDownloadButton_clicked()
 {
     QString zip = ui->ZipcodeEdit->text();
     qDebug() << zip;
-    httpManager->sendImageRequest(zip);
+    httpManager->sendMapRequest(zip);
 }
 
 void MainWindow::on_WeatherDownloadButton_clicked()

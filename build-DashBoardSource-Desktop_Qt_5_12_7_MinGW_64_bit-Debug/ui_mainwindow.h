@@ -36,6 +36,7 @@ public:
     QPushButton *WeatherDownloadButton;
     QLabel *WeatherLabel;
     QLabel *WeatherIcon;
+    QLabel *PhotoAlbum;
     QMenuBar *menubar;
     QStatusBar *statusbar;
 
@@ -43,7 +44,7 @@ public:
     {
         if (MainWindow->objectName().isEmpty())
             MainWindow->setObjectName(QString::fromUtf8("MainWindow"));
-        MainWindow->resize(1304, 763);
+        MainWindow->resize(1304, 1178);
         centralwidget = new QWidget(MainWindow);
         centralwidget->setObjectName(QString::fromUtf8("centralwidget"));
         Hours = new QLCDNumber(centralwidget);
@@ -89,6 +90,9 @@ public:
         WeatherIcon = new QLabel(centralwidget);
         WeatherIcon->setObjectName(QString::fromUtf8("WeatherIcon"));
         WeatherIcon->setGeometry(QRect(490, 90, 131, 111));
+        PhotoAlbum = new QLabel(centralwidget);
+        PhotoAlbum->setObjectName(QString::fromUtf8("PhotoAlbum"));
+        PhotoAlbum->setGeometry(QRect(40, 550, 591, 391));
         MainWindow->setCentralWidget(centralwidget);
         menubar = new QMenuBar(MainWindow);
         menubar->setObjectName(QString::fromUtf8("menubar"));
@@ -108,12 +112,13 @@ public:
         MainWindow->setWindowTitle(QApplication::translate("MainWindow", "MainWindow", nullptr));
         ampm->setText(QApplication::translate("MainWindow", "am", nullptr));
         Greeting->setText(QApplication::translate("MainWindow", "Hi!", nullptr));
-        ImageDownloadButton->setText(QApplication::translate("MainWindow", "Image Downlad ", nullptr));
+        ImageDownloadButton->setText(QApplication::translate("MainWindow", "Download Map ", nullptr));
         ImageLabel->setText(QApplication::translate("MainWindow", "ImageLabel", nullptr));
         ZipcodeEdit->setText(QApplication::translate("MainWindow", "98113", nullptr));
-        WeatherDownloadButton->setText(QApplication::translate("MainWindow", "Weather Download", nullptr));
+        WeatherDownloadButton->setText(QApplication::translate("MainWindow", "Download Weather", nullptr));
         WeatherLabel->setText(QApplication::translate("MainWindow", "WeatherLabel", nullptr));
         WeatherIcon->setText(QString());
+        PhotoAlbum->setText(QApplication::translate("MainWindow", "PhotoAlbum", nullptr));
     } // retranslateUi
 
 };
