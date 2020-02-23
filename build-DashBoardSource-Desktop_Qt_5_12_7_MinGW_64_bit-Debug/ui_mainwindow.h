@@ -35,6 +35,7 @@ public:
     QLineEdit *ZipcodeEdit;
     QPushButton *WeatherDownloadButton;
     QLabel *WeatherLabel;
+    QLabel *WeatherIcon;
     QMenuBar *menubar;
     QStatusBar *statusbar;
 
@@ -85,6 +86,9 @@ public:
         WeatherLabel = new QLabel(centralwidget);
         WeatherLabel->setObjectName(QString::fromUtf8("WeatherLabel"));
         WeatherLabel->setGeometry(QRect(490, 300, 421, 211));
+        WeatherIcon = new QLabel(centralwidget);
+        WeatherIcon->setObjectName(QString::fromUtf8("WeatherIcon"));
+        WeatherIcon->setGeometry(QRect(490, 90, 131, 111));
         MainWindow->setCentralWidget(centralwidget);
         menubar = new QMenuBar(MainWindow);
         menubar->setObjectName(QString::fromUtf8("menubar"));
@@ -109,6 +113,7 @@ public:
         ZipcodeEdit->setText(QApplication::translate("MainWindow", "98113", nullptr));
         WeatherDownloadButton->setText(QApplication::translate("MainWindow", "Weather Download", nullptr));
         WeatherLabel->setText(QApplication::translate("MainWindow", "WeatherLabel", nullptr));
+        WeatherIcon->setText(QString());
     } // retranslateUi
 
 };

@@ -81,6 +81,8 @@ void MainWindow::processWeatherJson(QJsonObject *json)
         qDebug() << temp_min;
         qDebug() << temp_max;
 
+        loadWeatherImages(weather);
+
         ui->WeatherLabel->setText("Current Weather: " + weather + ", temp: " + QString::number(temp));
 
         /*
@@ -97,6 +99,66 @@ void MainWindow::processWeatherJson(QJsonObject *json)
          *    "timezone":-25200,"id":420040214,"name":"Seattle","cod":200
          * }
          * */
+}
+
+void MainWindow::loadWeatherImages(QString current)
+{
+        QString clearFileName(":/Images/sun.png");
+        QString cloudFileName(":/Images/Cloudy.png");
+        QString snowFileName(":/Images/Snow.png");
+        QString rainFileName(":/Images/Rain.png");
+        QString drizzleFileName(":/Images/Drizzle.png");
+        QString thunderFileName(":/Images/Thunder.png");
+
+
+        if(current == "Clear"){
+            if(clearIcon.load(clearFileName)){
+               qDebug() << "Image loaded successfully";
+               clearIcon = clearIcon.scaled(ui->WeatherIcon->size(), Qt::KeepAspectRatio);
+
+               ui->WeatherIcon->setPixmap(clearIcon);
+            }
+        }
+        else if(current == "Clouds"){
+            if(cloudIcon.load(cloudFileName)){
+               qDebug() << "Image loaded successfully";
+               cloudIcon = cloudIcon.scaled(ui->WeatherIcon->size(), Qt::KeepAspectRatio);
+            }
+
+            ui->WeatherIcon->setPixmap(cloudIcon);
+        }
+        else if(current == "Snow"){
+            if(snowIcon.load(clearFileName)){
+               qDebug() << "Image loaded successfully";
+               snowIcon = snowIcon.scaled(ui->WeatherIcon->size(), Qt::KeepAspectRatio);
+            }
+
+            ui->WeatherIcon->setPixmap(snowIcon);
+        }
+        else if(current == "Rain"){
+            if(rainIcon.load(clearFileName)){
+               qDebug() << "Image loaded successfully";
+               rainIcon = rainIcon.scaled(ui->WeatherIcon->size(), Qt::KeepAspectRatio);
+            }
+
+            ui->WeatherIcon->setPixmap(rainIcon);
+        }
+        else if(current == "Drizzle"){
+            if(drizzleIcon.load(clearFileName)){
+               qDebug() << "Image loaded successfully";
+               drizzleIcon = drizzleIcon.scaled(ui->WeatherIcon->size(), Qt::KeepAspectRatio);
+            }
+
+            ui->WeatherIcon->setPixmap(drizzleIcon);
+        }
+        else if(current == "Thunderstorm"){
+            if(thunderIcon.load(clearFileName)){
+               qDebug() << "Image loaded successfully";
+               thunderIcon = thunderIcon.scaled(ui->WeatherIcon->size(), Qt::KeepAspectRatio);
+            }
+
+            ui->WeatherIcon->setPixmap(thunderIcon);
+        }
 }
 
 

@@ -152,6 +152,19 @@
      <string>WeatherLabel</string>
     </property>
    </widget>
+   <widget class="QLabel" name="WeatherIcon">
+    <property name="geometry">
+     <rect>
+      <x>490</x>
+      <y>90</y>
+      <width>131</width>
+      <height>111</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">

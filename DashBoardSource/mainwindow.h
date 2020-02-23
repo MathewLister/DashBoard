@@ -25,6 +25,8 @@ private slots:
     void processImage(QPixmap *);
     void processWeatherJson(QJsonObject *json);
 
+    void loadWeatherImages(QString current);
+
     void on_ImageDownloadButton_clicked();
 
     void on_WeatherDownloadButton_clicked();
@@ -34,5 +36,12 @@ private:
     QTimer *timer;
     HTTPManager *httpManager;
 
+
+    QPixmap clearIcon;
+    QPixmap cloudIcon;
+    QPixmap snowIcon;
+    QPixmap rainIcon;
+    QPixmap drizzleIcon;
+    QPixmap thunderIcon;
 };
 #endif // MAINWINDOW_H
