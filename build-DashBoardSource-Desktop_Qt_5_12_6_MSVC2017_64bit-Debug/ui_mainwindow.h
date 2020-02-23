@@ -13,8 +13,10 @@
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QLCDNumber>
 #include <QtWidgets/QLabel>
+#include <QtWidgets/QLineEdit>
 #include <QtWidgets/QMainWindow>
 #include <QtWidgets/QMenuBar>
+#include <QtWidgets/QPushButton>
 #include <QtWidgets/QStatusBar>
 #include <QtWidgets/QWidget>
 
@@ -28,6 +30,12 @@ public:
     QLCDNumber *Mins;
     QLabel *ampm;
     QLabel *Greeting;
+    QPushButton *ImageDownloadButton;
+    QLabel *ImageLabel;
+    QLineEdit *ZipcodeEdit;
+    QPushButton *WeatherDownloadButton;
+    QLabel *WeatherLabel;
+    QLabel *WeatherIcon;
     QMenuBar *menubar;
     QStatusBar *statusbar;
 
@@ -35,7 +43,7 @@ public:
     {
         if (MainWindow->objectName().isEmpty())
             MainWindow->setObjectName(QString::fromUtf8("MainWindow"));
-        MainWindow->resize(1290, 1026);
+        MainWindow->resize(1304, 763);
         centralwidget = new QWidget(MainWindow);
         centralwidget->setObjectName(QString::fromUtf8("centralwidget"));
         Hours = new QLCDNumber(centralwidget);
@@ -63,10 +71,28 @@ public:
         QFont font2;
         font2.setPointSize(12);
         Greeting->setFont(font2);
+        ImageDownloadButton = new QPushButton(centralwidget);
+        ImageDownloadButton->setObjectName(QString::fromUtf8("ImageDownloadButton"));
+        ImageDownloadButton->setGeometry(QRect(60, 250, 191, 51));
+        ImageLabel = new QLabel(centralwidget);
+        ImageLabel->setObjectName(QString::fromUtf8("ImageLabel"));
+        ImageLabel->setGeometry(QRect(40, 310, 421, 211));
+        ZipcodeEdit = new QLineEdit(centralwidget);
+        ZipcodeEdit->setObjectName(QString::fromUtf8("ZipcodeEdit"));
+        ZipcodeEdit->setGeometry(QRect(260, 250, 151, 31));
+        WeatherDownloadButton = new QPushButton(centralwidget);
+        WeatherDownloadButton->setObjectName(QString::fromUtf8("WeatherDownloadButton"));
+        WeatherDownloadButton->setGeometry(QRect(470, 240, 191, 51));
+        WeatherLabel = new QLabel(centralwidget);
+        WeatherLabel->setObjectName(QString::fromUtf8("WeatherLabel"));
+        WeatherLabel->setGeometry(QRect(490, 300, 421, 211));
+        WeatherIcon = new QLabel(centralwidget);
+        WeatherIcon->setObjectName(QString::fromUtf8("WeatherIcon"));
+        WeatherIcon->setGeometry(QRect(490, 90, 131, 111));
         MainWindow->setCentralWidget(centralwidget);
         menubar = new QMenuBar(MainWindow);
         menubar->setObjectName(QString::fromUtf8("menubar"));
-        menubar->setGeometry(QRect(0, 0, 1290, 29));
+        menubar->setGeometry(QRect(0, 0, 1304, 20));
         MainWindow->setMenuBar(menubar);
         statusbar = new QStatusBar(MainWindow);
         statusbar->setObjectName(QString::fromUtf8("statusbar"));
@@ -82,6 +108,12 @@ public:
         MainWindow->setWindowTitle(QApplication::translate("MainWindow", "MainWindow", nullptr));
         ampm->setText(QApplication::translate("MainWindow", "am", nullptr));
         Greeting->setText(QApplication::translate("MainWindow", "Hi!", nullptr));
+        ImageDownloadButton->setText(QApplication::translate("MainWindow", "Image Downlad ", nullptr));
+        ImageLabel->setText(QApplication::translate("MainWindow", "ImageLabel", nullptr));
+        ZipcodeEdit->setText(QApplication::translate("MainWindow", "98113", nullptr));
+        WeatherDownloadButton->setText(QApplication::translate("MainWindow", "Weather Download", nullptr));
+        WeatherLabel->setText(QApplication::translate("MainWindow", "WeatherLabel", nullptr));
+        WeatherIcon->setText(QString());
     } // retranslateUi
 
 };
