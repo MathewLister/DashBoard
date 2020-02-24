@@ -178,6 +178,22 @@
      <string>PhotoAlbum</string>
     </property>
    </widget>
+   <widget class="QTableView" name="ToDoList">
+    <property name="geometry">
+     <rect>
+      <x>865</x>
+      <y>100</y>
+      <width>301</width>
+      <height>261</height>
+     </rect>
+    </property>
+    <attribute name="horizontalHeaderVisible">
+     <bool>false</bool>
+    </attribute>
+    <attribute name="verticalHeaderVisible">
+     <bool>true</bool>
+    </attribute>
+   </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
@@ -185,11 +201,30 @@
      <x>0</x>
      <y>0</y>
      <width>1304</width>
-     <height>20</height>
+     <height>29</height>
     </rect>
    </property>
+   <widget class="QMenu" name="menuTools">
+    <property name="title">
+     <string>Tools</string>
+    </property>
+    <addaction name="actionAdd_To_do_list"/>
+    <addaction name="separator"/>
+    <addaction name="actionExit"/>
+   </widget>
+   <addaction name="menuTools"/>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
+  <action name="actionAdd_To_do_list">
+   <property name="text">
+    <string>Add To do list</string>
+   </property>
+  </action>
+  <action name="actionExit">
+   <property name="text">
+    <string>Exit</string>
+   </property>
+  </action>
  </widget>
  <resources/>
  <connections/>

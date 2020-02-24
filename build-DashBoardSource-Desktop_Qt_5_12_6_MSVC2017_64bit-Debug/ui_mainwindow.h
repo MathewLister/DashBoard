@@ -10,14 +10,18 @@
 #define UI_MAINWINDOW_H
 
 #include <QtCore/QVariant>
+#include <QtWidgets/QAction>
 #include <QtWidgets/QApplication>
+#include <QtWidgets/QHeaderView>
 #include <QtWidgets/QLCDNumber>
 #include <QtWidgets/QLabel>
 #include <QtWidgets/QLineEdit>
 #include <QtWidgets/QMainWindow>
+#include <QtWidgets/QMenu>
 #include <QtWidgets/QMenuBar>
 #include <QtWidgets/QPushButton>
 #include <QtWidgets/QStatusBar>
+#include <QtWidgets/QTableView>
 #include <QtWidgets/QWidget>
 
 QT_BEGIN_NAMESPACE
@@ -25,6 +29,8 @@ QT_BEGIN_NAMESPACE
 class Ui_MainWindow
 {
 public:
+    QAction *actionAdd_To_do_list;
+    QAction *actionExit;
     QWidget *centralwidget;
     QLCDNumber *Hours;
     QLCDNumber *Mins;
@@ -36,14 +42,21 @@ public:
     QPushButton *WeatherDownloadButton;
     QLabel *WeatherLabel;
     QLabel *WeatherIcon;
+    QLabel *PhotoAlbum;
+    QTableView *ToDoList;
     QMenuBar *menubar;
+    QMenu *menuTools;
     QStatusBar *statusbar;
 
     void setupUi(QMainWindow *MainWindow)
     {
         if (MainWindow->objectName().isEmpty())
             MainWindow->setObjectName(QString::fromUtf8("MainWindow"));
-        MainWindow->resize(1304, 763);
+        MainWindow->resize(1304, 1178);
+        actionAdd_To_do_list = new QAction(MainWindow);
+        actionAdd_To_do_list->setObjectName(QString::fromUtf8("actionAdd_To_do_list"));
+        actionExit = new QAction(MainWindow);
+        actionExit->setObjectName(QString::fromUtf8("actionExit"));
         centralwidget = new QWidget(MainWindow);
         centralwidget->setObjectName(QString::fromUtf8("centralwidget"));
         Hours = new QLCDNumber(centralwidget);
@@ -89,14 +102,29 @@ public:
         WeatherIcon = new QLabel(centralwidget);
         WeatherIcon->setObjectName(QString::fromUtf8("WeatherIcon"));
         WeatherIcon->setGeometry(QRect(490, 90, 131, 111));
+        PhotoAlbum = new QLabel(centralwidget);
+        PhotoAlbum->setObjectName(QString::fromUtf8("PhotoAlbum"));
+        PhotoAlbum->setGeometry(QRect(40, 550, 591, 391));
+        ToDoList = new QTableView(centralwidget);
+        ToDoList->setObjectName(QString::fromUtf8("ToDoList"));
+        ToDoList->setGeometry(QRect(865, 100, 301, 261));
+        ToDoList->horizontalHeader()->setVisible(false);
+        ToDoList->verticalHeader()->setVisible(true);
         MainWindow->setCentralWidget(centralwidget);
         menubar = new QMenuBar(MainWindow);
         menubar->setObjectName(QString::fromUtf8("menubar"));
-        menubar->setGeometry(QRect(0, 0, 1304, 20));
+        menubar->setGeometry(QRect(0, 0, 1304, 29));
+        menuTools = new QMenu(menubar);
+        menuTools->setObjectName(QString::fromUtf8("menuTools"));
         MainWindow->setMenuBar(menubar);
         statusbar = new QStatusBar(MainWindow);
         statusbar->setObjectName(QString::fromUtf8("statusbar"));
         MainWindow->setStatusBar(statusbar);
+
+        menubar->addAction(menuTools->menuAction());
+        menuTools->addAction(actionAdd_To_do_list);
+        menuTools->addSeparator();
+        menuTools->addAction(actionExit);
 
         retranslateUi(MainWindow);
 
@@ -106,14 +134,18 @@ public:
     void retranslateUi(QMainWindow *MainWindow)
     {
         MainWindow->setWindowTitle(QApplication::translate("MainWindow", "MainWindow", nullptr));
+        actionAdd_To_do_list->setText(QApplication::translate("MainWindow", "Add To do list", nullptr));
+        actionExit->setText(QApplication::translate("MainWindow", "Exit", nullptr));
         ampm->setText(QApplication::translate("MainWindow", "am", nullptr));
         Greeting->setText(QApplication::translate("MainWindow", "Hi!", nullptr));
-        ImageDownloadButton->setText(QApplication::translate("MainWindow", "Image Downlad ", nullptr));
+        ImageDownloadButton->setText(QApplication::translate("MainWindow", "Download Map ", nullptr));
         ImageLabel->setText(QApplication::translate("MainWindow", "ImageLabel", nullptr));
         ZipcodeEdit->setText(QApplication::translate("MainWindow", "98113", nullptr));
-        WeatherDownloadButton->setText(QApplication::translate("MainWindow", "Weather Download", nullptr));
+        WeatherDownloadButton->setText(QApplication::translate("MainWindow", "Download Weather", nullptr));
         WeatherLabel->setText(QApplication::translate("MainWindow", "WeatherLabel", nullptr));
         WeatherIcon->setText(QString());
+        PhotoAlbum->setText(QApplication::translate("MainWindow", "PhotoAlbum", nullptr));
+        menuTools->setTitle(QApplication::translate("MainWindow", "Tools", nullptr));
     } // retranslateUi
 
 };

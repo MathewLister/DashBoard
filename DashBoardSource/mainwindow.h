@@ -5,8 +5,10 @@
 #include <QTimer>
 #include <QTime>
 #include <QJsonObject>
+#include <QFileDialog>
 
 #include "httpmanager.h"
+#include "todolistmodel.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -32,10 +34,15 @@ private slots:
 
     void on_WeatherDownloadButton_clicked();
 
+    void on_actionAdd_To_do_list_triggered();
+
+    void on_actionExit_triggered();
+
 private:
     Ui::MainWindow *ui;
     QTimer *timer;
     HTTPManager *httpManager;
+    todolistmodel *myModel;
 
 
     QPixmap clearIcon;

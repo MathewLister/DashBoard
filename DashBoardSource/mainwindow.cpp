@@ -1,13 +1,16 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
 
+
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::MainWindow)
     , timer(new QTimer)
     , httpManager(new HTTPManager)
+    , myModel(new todolistmodel(this))
 {
     ui->setupUi(this);
+    ui->ToDoList->setModel(myModel);
     connect(timer, SIGNAL(timeout()), this, SLOT(setCurrentTime()));
     setCurrentTime();
     timer->start(1000);
@@ -185,4 +188,19 @@ void MainWindow::on_WeatherDownloadButton_clicked()
     QString zip = ui->ZipcodeEdit->text();
     qDebug() << zip;
     httpManager->sendWeatherRequest(zip);
+}
+
+void MainWindow::on_actionAdd_To_do_list_triggered()
+{
+    QString fileName = QFileDialog::getOpenFileName(this,
+                                                   tr("Open Address Book"), "",
+                                                   tr("Address Book (*.csv);;All Files (*)"));
+    std::cout << fileName.toStdString() << std::endl;
+
+    myModel->openFile(fileName);
+}
+
+void MainWindow::on_actionExit_triggered()
+{
+    close();
 }
