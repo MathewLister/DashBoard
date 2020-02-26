@@ -11,6 +11,8 @@ MainWindow::MainWindow(QWidget *parent)
 {
     ui->setupUi(this);
     ui->ToDoList->setModel(myModel);
+    on_ImageDownloadButton_clicked();
+    on_WeatherDownloadButton_clicked();
     myModel->openFile(":/tasksDefault.csv");
     connect(timer, SIGNAL(timeout()), this, SLOT(setCurrentTime()));
     setCurrentTime();
