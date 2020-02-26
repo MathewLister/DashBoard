@@ -11,9 +11,14 @@ MainWindow::MainWindow(QWidget *parent)
 {
     ui->setupUi(this);
     ui->ToDoList->setModel(myModel);
+
+    //Display map on execution with default zip
     on_ImageDownloadButton_clicked();
+    //Display weather on execttion with default zip
     on_WeatherDownloadButton_clicked();
+    //Display default tasks list
     myModel->openFile(":/tasksDefault.csv");
+
     connect(timer, SIGNAL(timeout()), this, SLOT(setCurrentTime()));
     setCurrentTime();
     timer->start(1000);
