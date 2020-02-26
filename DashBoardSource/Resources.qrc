@@ -6,5 +6,15 @@
         <file>Images/Snow.png</file>
         <file>Images/sun.png</file>
         <file>Images/Thunder.png</file>
+        <file>Fonts/Cocogoose Pro Italic-trial.ttf</file>
+        <file>Fonts/Cocogoose Pro Light Italic-trial.ttf</file>
+        <file>Fonts/Cocogoose Pro Light-trial.ttf</file>
+        <file>Fonts/Cocogoose Pro Semilight Italic-trial.ttf</file>
+        <file>Fonts/Cocogoose Pro Semilight-trial.ttf</file>
+        <file>Fonts/Cocogoose Pro Thin Italic-trial.ttf</file>
+        <file>Fonts/Cocogoose Pro Thin-trial.ttf</file>
+        <file>Fonts/Cocogoose Pro UltraLight Italic-trial.ttf</file>
+        <file>Fonts/Cocogoose Pro Ultralight-trial.ttf</file>
+        <file>Fonts/Cocogoose Pro-trial.ttf</file>
     </qresource>
 </RCC>

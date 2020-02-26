@@ -452,6 +452,11 @@ release\moc_mainwindow.cpp: ..\DashBoardSource\mainwindow.h \
 		C:\Qt\5.12.6\msvc2017_64\include\QtCore\QJsonObject \
 		C:\Qt\5.12.6\msvc2017_64\include\QtCore\qjsonobject.h \
 		C:\Qt\5.12.6\msvc2017_64\include\QtCore\qjsonvalue.h \
+		C:\Qt\5.12.6\msvc2017_64\include\QtWidgets\QFileDialog \
+		C:\Qt\5.12.6\msvc2017_64\include\QtWidgets\qfiledialog.h \
+		C:\Qt\5.12.6\msvc2017_64\include\QtCore\qdir.h \
+		C:\Qt\5.12.6\msvc2017_64\include\QtCore\qfileinfo.h \
+		C:\Qt\5.12.6\msvc2017_64\include\QtWidgets\qdialog.h \
 		..\DashBoardSource\httpmanager.h \
 		C:\Qt\5.12.6\msvc2017_64\include\QtCore\QObject \
 		C:\Qt\5.12.6\msvc2017_64\include\QtNetwork\QNetworkAccessManager \
@@ -486,6 +491,13 @@ release\moc_mainwindow.cpp: ..\DashBoardSource\mainwindow.h \
 		C:\Qt\5.12.6\msvc2017_64\include\QtCore\qjsondocument.h \
 		C:\Qt\5.12.6\msvc2017_64\include\QtCore\QJsonArray \
 		C:\Qt\5.12.6\msvc2017_64\include\QtCore\qjsonarray.h \
+		..\DashBoardSource\todolistmodel.h \
+		C:\Qt\5.12.6\msvc2017_64\include\QtCore\QAbstractTableModel \
+		C:\Qt\5.12.6\msvc2017_64\include\QtCore\qabstractitemmodel.h \
+		C:\Qt\5.12.6\msvc2017_64\include\QtCore\QFile \
+		C:\Qt\5.12.6\msvc2017_64\include\QtWidgets\QMessageBox \
+		C:\Qt\5.12.6\msvc2017_64\include\QtWidgets\qmessagebox.h \
+		C:\Qt\5.12.6\msvc2017_64\include\QtCore\QTextStream \
 		release\moc_predefs.h \
 		C:\Qt\5.12.6\msvc2017_64\bin\moc.exe
 	C:\Qt\5.12.6\msvc2017_64\bin\moc.exe $(DEFINES) --compiler-flavor=msvc --include C:/Users/angry/Documents/CODE/QT/DashBoard/build-DashBoardSource-Desktop_Qt_5_12_6_MSVC2017_64bit-Debug/release/moc_predefs.h -IC:/Qt/5.12.6/msvc2017_64/mkspecs/win32-msvc -IC:/Users/angry/Documents/CODE/QT/DashBoard/DashBoardSource -IC:/OpenSSL-Win64/include -IC:/Qt/5.12.6/msvc2017_64/include -IC:/Qt/5.12.6/msvc2017_64/include/QtWidgets -IC:/Qt/5.12.6/msvc2017_64/include/QtGui -IC:/Qt/5.12.6/msvc2017_64/include/QtANGLE -IC:/Qt/5.12.6/msvc2017_64/include/QtNetwork -IC:/Qt/5.12.6/msvc2017_64/include/QtCore -I. -I"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.22.27905\ATLMFC\include" -I"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.22.27905\include" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.17763.0\ucrt" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.17763.0\shared" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.17763.0\um" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.17763.0\winrt" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.17763.0\cppwinrt" ..\DashBoardSource\mainwindow.h -o release\moc_mainwindow.cpp
@@ -756,6 +768,11 @@ release\main.obj: ..\DashBoardSource\main.cpp ..\DashBoardSource\mainwindow.h \
 		C:\Qt\5.12.6\msvc2017_64\include\QtCore\QJsonObject \
 		C:\Qt\5.12.6\msvc2017_64\include\QtCore\qjsonobject.h \
 		C:\Qt\5.12.6\msvc2017_64\include\QtCore\qjsonvalue.h \
+		C:\Qt\5.12.6\msvc2017_64\include\QtWidgets\QFileDialog \
+		C:\Qt\5.12.6\msvc2017_64\include\QtWidgets\qfiledialog.h \
+		C:\Qt\5.12.6\msvc2017_64\include\QtCore\qdir.h \
+		C:\Qt\5.12.6\msvc2017_64\include\QtCore\qfileinfo.h \
+		C:\Qt\5.12.6\msvc2017_64\include\QtWidgets\qdialog.h \
 		..\DashBoardSource\httpmanager.h \
 		C:\Qt\5.12.6\msvc2017_64\include\QtCore\QObject \
 		C:\Qt\5.12.6\msvc2017_64\include\QtNetwork\QNetworkAccessManager \
@@ -790,6 +807,13 @@ release\main.obj: ..\DashBoardSource\main.cpp ..\DashBoardSource\mainwindow.h \
 		C:\Qt\5.12.6\msvc2017_64\include\QtCore\qjsondocument.h \
 		C:\Qt\5.12.6\msvc2017_64\include\QtCore\QJsonArray \
 		C:\Qt\5.12.6\msvc2017_64\include\QtCore\qjsonarray.h \
+		..\DashBoardSource\todolistmodel.h \
+		C:\Qt\5.12.6\msvc2017_64\include\QtCore\QAbstractTableModel \
+		C:\Qt\5.12.6\msvc2017_64\include\QtCore\qabstractitemmodel.h \
+		C:\Qt\5.12.6\msvc2017_64\include\QtCore\QFile \
+		C:\Qt\5.12.6\msvc2017_64\include\QtWidgets\QMessageBox \
+		C:\Qt\5.12.6\msvc2017_64\include\QtWidgets\qmessagebox.h \
+		C:\Qt\5.12.6\msvc2017_64\include\QtCore\QTextStream \
 		C:\Qt\5.12.6\msvc2017_64\include\QtWidgets\QApplication \
 		C:\Qt\5.12.6\msvc2017_64\include\QtWidgets\qapplication.h \
 		C:\Qt\5.12.6\msvc2017_64\include\QtCore\qcoreapplication.h \
@@ -913,6 +937,11 @@ release\mainwindow.obj: ..\DashBoardSource\mainwindow.cpp ..\DashBoardSource\mai
 		C:\Qt\5.12.6\msvc2017_64\include\QtCore\QJsonObject \
 		C:\Qt\5.12.6\msvc2017_64\include\QtCore\qjsonobject.h \
 		C:\Qt\5.12.6\msvc2017_64\include\QtCore\qjsonvalue.h \
+		C:\Qt\5.12.6\msvc2017_64\include\QtWidgets\QFileDialog \
+		C:\Qt\5.12.6\msvc2017_64\include\QtWidgets\qfiledialog.h \
+		C:\Qt\5.12.6\msvc2017_64\include\QtCore\qdir.h \
+		C:\Qt\5.12.6\msvc2017_64\include\QtCore\qfileinfo.h \
+		C:\Qt\5.12.6\msvc2017_64\include\QtWidgets\qdialog.h \
 		..\DashBoardSource\httpmanager.h \
 		C:\Qt\5.12.6\msvc2017_64\include\QtCore\QObject \
 		C:\Qt\5.12.6\msvc2017_64\include\QtNetwork\QNetworkAccessManager \
@@ -947,7 +976,62 @@ release\mainwindow.obj: ..\DashBoardSource\mainwindow.cpp ..\DashBoardSource\mai
 		C:\Qt\5.12.6\msvc2017_64\include\QtCore\qjsondocument.h \
 		C:\Qt\5.12.6\msvc2017_64\include\QtCore\QJsonArray \
 		C:\Qt\5.12.6\msvc2017_64\include\QtCore\qjsonarray.h \
-		ui_mainwindow.h
+		..\DashBoardSource\todolistmodel.h \
+		C:\Qt\5.12.6\msvc2017_64\include\QtCore\QAbstractTableModel \
+		C:\Qt\5.12.6\msvc2017_64\include\QtCore\qabstractitemmodel.h \
+		C:\Qt\5.12.6\msvc2017_64\include\QtCore\QFile \
+		C:\Qt\5.12.6\msvc2017_64\include\QtWidgets\QMessageBox \
+		C:\Qt\5.12.6\msvc2017_64\include\QtWidgets\qmessagebox.h \
+		C:\Qt\5.12.6\msvc2017_64\include\QtCore\QTextStream \
+		ui_mainwindow.h \
+		C:\Qt\5.12.6\msvc2017_64\include\QtWidgets\QAction \
+		C:\Qt\5.12.6\msvc2017_64\include\QtWidgets\qaction.h \
+		C:\Qt\5.12.6\msvc2017_64\include\QtWidgets\qactiongroup.h \
+		C:\Qt\5.12.6\msvc2017_64\include\QtWidgets\QApplication \
+		C:\Qt\5.12.6\msvc2017_64\include\QtWidgets\qapplication.h \
+		C:\Qt\5.12.6\msvc2017_64\include\QtCore\qcoreapplication.h \
+		C:\Qt\5.12.6\msvc2017_64\include\QtCore\qeventloop.h \
+		C:\Qt\5.12.6\msvc2017_64\include\QtWidgets\qdesktopwidget.h \
+		C:\Qt\5.12.6\msvc2017_64\include\QtGui\qguiapplication.h \
+		C:\Qt\5.12.6\msvc2017_64\include\QtGui\qinputmethod.h \
+		C:\Qt\5.12.6\msvc2017_64\include\QtWidgets\QHeaderView \
+		C:\Qt\5.12.6\msvc2017_64\include\QtWidgets\qheaderview.h \
+		C:\Qt\5.12.6\msvc2017_64\include\QtWidgets\qabstractitemview.h \
+		C:\Qt\5.12.6\msvc2017_64\include\QtWidgets\qabstractscrollarea.h \
+		C:\Qt\5.12.6\msvc2017_64\include\QtWidgets\qframe.h \
+		C:\Qt\5.12.6\msvc2017_64\include\QtCore\qitemselectionmodel.h \
+		C:\Qt\5.12.6\msvc2017_64\include\QtWidgets\qabstractitemdelegate.h \
+		C:\Qt\5.12.6\msvc2017_64\include\QtWidgets\qstyleoption.h \
+		C:\Qt\5.12.6\msvc2017_64\include\QtWidgets\qabstractspinbox.h \
+		C:\Qt\5.12.6\msvc2017_64\include\QtGui\qvalidator.h \
+		C:\Qt\5.12.6\msvc2017_64\include\QtCore\qregularexpression.h \
+		C:\Qt\5.12.6\msvc2017_64\include\QtWidgets\qslider.h \
+		C:\Qt\5.12.6\msvc2017_64\include\QtWidgets\qabstractslider.h \
+		C:\Qt\5.12.6\msvc2017_64\include\QtWidgets\qstyle.h \
+		C:\Qt\5.12.6\msvc2017_64\include\QtWidgets\qtabbar.h \
+		C:\Qt\5.12.6\msvc2017_64\include\QtWidgets\qrubberband.h \
+		C:\Qt\5.12.6\msvc2017_64\include\QtWidgets\QLCDNumber \
+		C:\Qt\5.12.6\msvc2017_64\include\QtWidgets\qlcdnumber.h \
+		C:\Qt\5.12.6\msvc2017_64\include\QtWidgets\QLabel \
+		C:\Qt\5.12.6\msvc2017_64\include\QtWidgets\qlabel.h \
+		C:\Qt\5.12.6\msvc2017_64\include\QtWidgets\QLineEdit \
+		C:\Qt\5.12.6\msvc2017_64\include\QtWidgets\qlineedit.h \
+		C:\Qt\5.12.6\msvc2017_64\include\QtGui\qtextcursor.h \
+		C:\Qt\5.12.6\msvc2017_64\include\QtGui\qtextformat.h \
+		C:\Qt\5.12.6\msvc2017_64\include\QtGui\qpen.h \
+		C:\Qt\5.12.6\msvc2017_64\include\QtGui\qtextoption.h \
+		C:\Qt\5.12.6\msvc2017_64\include\QtWidgets\QMenu \
+		C:\Qt\5.12.6\msvc2017_64\include\QtWidgets\qmenu.h \
+		C:\Qt\5.12.6\msvc2017_64\include\QtWidgets\QMenuBar \
+		C:\Qt\5.12.6\msvc2017_64\include\QtWidgets\qmenubar.h \
+		C:\Qt\5.12.6\msvc2017_64\include\QtWidgets\QPushButton \
+		C:\Qt\5.12.6\msvc2017_64\include\QtWidgets\qpushbutton.h \
+		C:\Qt\5.12.6\msvc2017_64\include\QtWidgets\qabstractbutton.h \
+		C:\Qt\5.12.6\msvc2017_64\include\QtWidgets\QStatusBar \
+		C:\Qt\5.12.6\msvc2017_64\include\QtWidgets\qstatusbar.h \
+		C:\Qt\5.12.6\msvc2017_64\include\QtWidgets\QTableView \
+		C:\Qt\5.12.6\msvc2017_64\include\QtWidgets\qtableview.h \
+		C:\Qt\5.12.6\msvc2017_64\include\QtWidgets\QWidget
 
 release\todolistmodel.obj: ..\DashBoardSource\todolistmodel.cpp ..\DashBoardSource\todolistmodel.h \
 		C:\Qt\5.12.6\msvc2017_64\include\QtCore\QAbstractTableModel \

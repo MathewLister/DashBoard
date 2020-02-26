@@ -59,18 +59,31 @@ void MainWindow::setCurrentTime()
     }
 
     //Make the clock 12 hrs instead of 24
+    QString zeroH = ""; //Holds 0 for hours if need be
+    QString zeroM = ""; //Hold 0 for mins if need be
     int twelveHour = hour.toInt();
     if (twelveHour > 12) {
         twelveHour = twelveHour - 12;
         hour = QString::number(twelveHour);
         ui->ampm->setText("pm");
     }
-    ui->Hours->display(hour);
-    ui->Mins->display(min);
+
+    //Takes care of keeping the clock in this format xx:xx
+    //I do not wnat the font from qLCD so I will use qLabel and need to handle this edge case
+    if (hour != "10" || hour != "11" || hour != "12")
+        zeroH = "0";
+    if (min == "1" || min == "2" || min == "3" || min == "4" || min == "5"
+            || min == "6" || min == "7" || min == "8" || min == "9")
+        zeroM = "0";
+
+    ui->Hours->setText(zeroH + hour);
+    ui->Mins->setText(zeroM + min);
 }
 
 void MainWindow::processImage(QPixmap *image)
 {
+    *image = image->scaled(ui->ImageLabel->size(), Qt::KeepAspectRatio);
+            //scaled(ui->WeatherIcon->size(), Qt::KeepAspectRatio);
     ui->ImageLabel->setPixmap(*image);
 }
 

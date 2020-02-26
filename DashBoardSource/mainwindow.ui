@@ -6,63 +6,29 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1304</width>
-    <height>1178</height>
+    <width>1302</width>
+    <height>1037</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QLCDNumber" name="Hours">
-    <property name="geometry">
-     <rect>
-      <x>40</x>
-      <y>100</y>
-      <width>131</width>
-      <height>101</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <family>MS Serif</family>
-     </font>
-    </property>
-    <property name="digitCount">
-     <number>2</number>
-    </property>
-    <property name="value" stdset="0">
-     <double>22.000000000000000</double>
-    </property>
-   </widget>
-   <widget class="QLCDNumber" name="Mins">
-    <property name="geometry">
-     <rect>
-      <x>180</x>
-      <y>100</y>
-      <width>131</width>
-      <height>101</height>
-     </rect>
-    </property>
-    <property name="digitCount">
-     <number>2</number>
-    </property>
-    <property name="value" stdset="0">
-     <double>22.000000000000000</double>
-    </property>
-   </widget>
    <widget class="QLabel" name="ampm">
     <property name="geometry">
      <rect>
-      <x>320</x>
-      <y>180</y>
-      <width>69</width>
-      <height>20</height>
+      <x>290</x>
+      <y>140</y>
+      <width>71</width>
+      <height>41</height>
      </rect>
     </property>
     <property name="font">
      <font>
-      <pointsize>10</pointsize>
+      <family>Roboto Medium</family>
+      <pointsize>20</pointsize>
+      <weight>50</weight>
+      <bold>false</bold>
      </font>
     </property>
     <property name="text">
@@ -72,29 +38,42 @@
    <widget class="QLabel" name="Greeting">
     <property name="geometry">
      <rect>
-      <x>50</x>
-      <y>40</y>
-      <width>251</width>
-      <height>41</height>
+      <x>20</x>
+      <y>30</y>
+      <width>361</width>
+      <height>51</height>
      </rect>
     </property>
     <property name="font">
      <font>
-      <pointsize>12</pointsize>
+      <family>Roboto Medium</family>
+      <pointsize>23</pointsize>
+      <weight>50</weight>
+      <bold>false</bold>
      </font>
     </property>
     <property name="text">
      <string>Hi!</string>
     </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
    </widget>
    <widget class="QPushButton" name="ImageDownloadButton">
     <property name="geometry">
      <rect>
-      <x>60</x>
-      <y>250</y>
-      <width>191</width>
+      <x>610</x>
+      <y>430</y>
+      <width>141</width>
       <height>51</height>
      </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Roboto Medium</family>
+      <weight>50</weight>
+      <bold>false</bold>
+     </font>
     </property>
     <property name="text">
      <string>Download Map </string>
@@ -103,11 +82,18 @@
    <widget class="QLabel" name="ImageLabel">
     <property name="geometry">
      <rect>
-      <x>40</x>
-      <y>310</y>
-      <width>421</width>
-      <height>211</height>
+      <x>390</x>
+      <y>20</y>
+      <width>871</width>
+      <height>391</height>
      </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Roboto Medium</family>
+      <weight>50</weight>
+      <bold>false</bold>
+     </font>
     </property>
     <property name="text">
      <string>ImageLabel</string>
@@ -116,11 +102,18 @@
    <widget class="QLineEdit" name="ZipcodeEdit">
     <property name="geometry">
      <rect>
-      <x>260</x>
-      <y>250</y>
+      <x>440</x>
+      <y>430</y>
       <width>151</width>
       <height>31</height>
      </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Roboto Medium</family>
+      <weight>50</weight>
+      <bold>false</bold>
+     </font>
     </property>
     <property name="text">
      <string>98113</string>
@@ -129,24 +122,38 @@
    <widget class="QPushButton" name="WeatherDownloadButton">
     <property name="geometry">
      <rect>
-      <x>470</x>
-      <y>240</y>
-      <width>191</width>
-      <height>51</height>
+      <x>310</x>
+      <y>430</y>
+      <width>111</width>
+      <height>41</height>
      </rect>
     </property>
+    <property name="font">
+     <font>
+      <family>Roboto Medium</family>
+      <weight>50</weight>
+      <bold>false</bold>
+     </font>
+    </property>
     <property name="text">
-     <string>Download Weather</string>
+     <string>Get Weather</string>
     </property>
    </widget>
    <widget class="QLabel" name="WeatherLabel">
     <property name="geometry">
      <rect>
-      <x>490</x>
-      <y>300</y>
-      <width>421</width>
-      <height>211</height>
+      <x>10</x>
+      <y>360</y>
+      <width>301</width>
+      <height>111</height>
      </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Roboto Medium</family>
+      <weight>50</weight>
+      <bold>false</bold>
+     </font>
     </property>
     <property name="text">
      <string>WeatherLabel</string>
@@ -155,24 +162,38 @@
    <widget class="QLabel" name="WeatherIcon">
     <property name="geometry">
      <rect>
-      <x>490</x>
-      <y>90</y>
-      <width>131</width>
-      <height>111</height>
+      <x>170</x>
+      <y>210</y>
+      <width>261</width>
+      <height>181</height>
      </rect>
     </property>
+    <property name="font">
+     <font>
+      <family>Roboto Medium</family>
+      <weight>50</weight>
+      <bold>false</bold>
+     </font>
+    </property>
     <property name="text">
-     <string/>
+     <string>WEATHER ICON</string>
     </property>
    </widget>
    <widget class="QLabel" name="PhotoAlbum">
     <property name="geometry">
      <rect>
-      <x>40</x>
-      <y>550</y>
+      <x>20</x>
+      <y>560</y>
       <width>591</width>
       <height>391</height>
      </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Roboto Medium</family>
+      <weight>50</weight>
+      <bold>false</bold>
+     </font>
     </property>
     <property name="text">
      <string>PhotoAlbum</string>
@@ -181,18 +202,115 @@
    <widget class="QTableView" name="ToDoList">
     <property name="geometry">
      <rect>
-      <x>865</x>
-      <y>100</y>
+      <x>850</x>
+      <y>530</y>
       <width>301</width>
-      <height>261</height>
+      <height>431</height>
      </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Roboto Medium</family>
+      <weight>50</weight>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="horizontalScrollBarPolicy">
+     <enum>Qt::ScrollBarAlwaysOff</enum>
     </property>
     <attribute name="horizontalHeaderVisible">
      <bool>false</bool>
     </attribute>
     <attribute name="verticalHeaderVisible">
-     <bool>true</bool>
+     <bool>false</bool>
     </attribute>
+   </widget>
+   <widget class="QLabel" name="Hours">
+    <property name="geometry">
+     <rect>
+      <x>60</x>
+      <y>100</y>
+      <width>101</width>
+      <height>81</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Roboto Medium</family>
+      <pointsize>40</pointsize>
+      <weight>50</weight>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>12</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="Colon">
+    <property name="geometry">
+     <rect>
+      <x>160</x>
+      <y>100</y>
+      <width>31</width>
+      <height>71</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Roboto Medium</family>
+      <pointsize>40</pointsize>
+      <weight>50</weight>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>:</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="Mins">
+    <property name="geometry">
+     <rect>
+      <x>190</x>
+      <y>100</y>
+      <width>101</width>
+      <height>81</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Roboto Medium</family>
+      <pointsize>40</pointsize>
+      <weight>50</weight>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>12</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="TaksHeader">
+    <property name="geometry">
+     <rect>
+      <x>810</x>
+      <y>470</y>
+      <width>361</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Roboto Medium</family>
+      <pointsize>23</pointsize>
+      <weight>50</weight>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>Tasks</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
    </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">
@@ -200,8 +318,8 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>1304</width>
-     <height>29</height>
+     <width>1302</width>
+     <height>30</height>
     </rect>
    </property>
    <widget class="QMenu" name="menuTools">
