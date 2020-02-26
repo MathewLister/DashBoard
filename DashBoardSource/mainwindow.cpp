@@ -11,6 +11,7 @@ MainWindow::MainWindow(QWidget *parent)
 {
     ui->setupUi(this);
     ui->ToDoList->setModel(myModel);
+    myModel->openFile(":/tasksDefault.csv");
     connect(timer, SIGNAL(timeout()), this, SLOT(setCurrentTime()));
     setCurrentTime();
     timer->start(1000);
