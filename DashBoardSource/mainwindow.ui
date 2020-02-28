@@ -62,7 +62,7 @@
    <widget class="QPushButton" name="ImageDownloadButton">
     <property name="geometry">
      <rect>
-      <x>610</x>
+      <x>620</x>
       <y>430</y>
       <width>141</width>
       <height>51</height>
@@ -76,7 +76,7 @@
      </font>
     </property>
     <property name="text">
-     <string>Download Map </string>
+     <string>Get Map </string>
     </property>
    </widget>
    <widget class="QLabel" name="ImageLabel">
@@ -102,7 +102,7 @@
    <widget class="QLineEdit" name="ZipcodeEdit">
     <property name="geometry">
      <rect>
-      <x>440</x>
+      <x>450</x>
       <y>430</y>
       <width>151</width>
       <height>31</height>
@@ -119,44 +119,25 @@
      <string>98113</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="WeatherDownloadButton">
+   <widget class="QLabel" name="TempLabel">
     <property name="geometry">
      <rect>
-      <x>310</x>
-      <y>430</y>
+      <x>20</x>
+      <y>370</y>
       <width>111</width>
-      <height>41</height>
+      <height>51</height>
      </rect>
     </property>
     <property name="font">
      <font>
       <family>Roboto Medium</family>
+      <pointsize>17</pointsize>
       <weight>50</weight>
       <bold>false</bold>
      </font>
     </property>
     <property name="text">
-     <string>Get Weather</string>
-    </property>
-   </widget>
-   <widget class="QLabel" name="WeatherLabel">
-    <property name="geometry">
-     <rect>
-      <x>10</x>
-      <y>360</y>
-      <width>301</width>
-      <height>111</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <family>Roboto Medium</family>
-      <weight>50</weight>
-      <bold>false</bold>
-     </font>
-    </property>
-    <property name="text">
-     <string>WeatherLabel</string>
+     <string>temp</string>
     </property>
    </widget>
    <widget class="QLabel" name="WeatherIcon">
@@ -310,6 +291,68 @@
     </property>
     <property name="alignment">
      <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="HumidityLabel">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>430</y>
+      <width>251</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Roboto Medium</family>
+      <pointsize>17</pointsize>
+      <weight>50</weight>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>Humidity: </string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="TempLabel_2">
+    <property name="geometry">
+     <rect>
+      <x>110</x>
+      <y>360</y>
+      <width>51</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Roboto Medium</family>
+      <pointsize>13</pointsize>
+      <weight>50</weight>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>o</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="WeatherDownloadButton">
+    <property name="geometry">
+     <rect>
+      <x>290</x>
+      <y>430</y>
+      <width>141</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Roboto Medium</family>
+      <weight>50</weight>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>Get Weather </string>
     </property>
    </widget>
   </widget>

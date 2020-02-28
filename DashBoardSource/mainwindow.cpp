@@ -67,7 +67,7 @@ void MainWindow::setCurrentTime()
     }
 
     //Make the clock 12 hrs instead of 24
-    QString zeroH = ""; //Holds 0 for hours if need be
+    QString zeroH = "0"; //Holds 0 for hours if need be
     QString zeroM = ""; //Hold 0 for mins if need be
     int twelveHour = hour.toInt();
     if (twelveHour > 12) {
@@ -78,8 +78,8 @@ void MainWindow::setCurrentTime()
 
     //Takes care of keeping the clock in this format xx:xx
     //I do not wnat the font from qLCD so I will use qLabel and need to handle this edge case
-    if (hour != "10" || hour != "11" || hour != "12")
-        zeroH = "0";
+    if (hour == "10" || hour == "11" || hour == "12")
+        zeroH = "";
     if (min == "1" || min == "2" || min == "3" || min == "4" || min == "5"
             || min == "6" || min == "7" || min == "8" || min == "9")
         zeroM = "0";
@@ -103,6 +103,7 @@ void MainWindow::processWeatherJson(QJsonObject *json)
         double temp = json->value("main").toObject()["temp"].toDouble();
         double temp_min = json->value("main").toObject()["temp_min"].toDouble();
         double temp_max = json->value("main").toObject()["temp_max"].toDouble();
+        double humidity = json->value("main").toObject()["humidity"].toDouble();
 
         qDebug() << weather;
         qDebug() << weatherDesc;
@@ -111,8 +112,10 @@ void MainWindow::processWeatherJson(QJsonObject *json)
         qDebug() << temp_max;
 
         loadWeatherImages(weather);
+        ui->TempLabel->setText(QString::number(temp));
+        ui->HumidityLabel->setText(ui->HumidityLabel->text() + " " + QString::number(humidity));
 
-        ui->WeatherLabel->setText("Current Weather: " + weather + ", temp: " + QString::number(temp));
+       // ui->WeatherLabel->setText("Current Weather: " + weather + ", temp: " + QString::number(temp));
 
         /*
          * {
